@@ -20,7 +20,26 @@ public class Main {
         
         WarGame game = new WarGame("War Game", p1Name, p2Name);
         
-        
-        
+        while(true){
+            
+            if (game.isGameOver()){
+                game.declareWinner();
+                break;
+            }
+            
+            System.out.print("f = flip cards / q = quit game: ");
+            String userChoice = sc.nextLine();
+            
+            if (userChoice.equals("f")){
+                game.playOneRound();
+                System.out.println("");
+            }else if (userChoice.equals("q")){
+                System.out.println("Game is quitted");
+                break;
+            }else{
+                System.out.println("Invalid command");
+            }
+        }
+        sc.close();
     }
 }

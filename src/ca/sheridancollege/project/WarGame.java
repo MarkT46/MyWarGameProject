@@ -15,7 +15,7 @@ public class WarGame extends Game{
     private WarPlayer player2;
     private Deck mainDeck;
 
-    public WarGame(String p1, String p2) {
+    public WarGame(String name, String p1, String p2) {
         super(name);
         this.player1 = new WarPlayer(p1);
         this.player2 = new WarPlayer(p2);

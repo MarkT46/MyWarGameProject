@@ -39,7 +39,7 @@ public class WarPlayer extends Player{
         return playerDeck.removeCard();
     }
     
-    public Card checkRefillNeeded() {
+    public void checkRefillNeeded() {
         if(playerDeck.isEmpty() && !myDiscardPile.isEmpty()) {
             playerDeck.addAll(new ArrayList<>(myDiscardPile.getCards()));
             myDiscardPile.getCards().clear();
