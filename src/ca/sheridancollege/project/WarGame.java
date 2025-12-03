@@ -101,8 +101,8 @@ public class WarGame extends Game{
             field.add(c1);
             field.add(c2);
             
-            System.out.println(player1.getName() + "war card: " + c1);
-            System.out.println(player2.getName() + "war card: " + c2);
+            System.out.println(player1.getName() + "'s war card: " + c1);
+            System.out.println(player2.getName() + "'s war card: " + c2);
             
             WarCard w1 = (WarCard) c1;
             WarCard w2 = (WarCard) c2;
