@@ -15,10 +15,10 @@ public class WarGame extends Game{
     private WarPlayer player2;
     private Deck mainDeck;
 
-    public WarGame(String name, String p1, String p2) {
+    public WarGame(String name, String player1, String player2) {
         super(name);
-        this.player1 = new WarPlayer(p1);
-        this.player2 = new WarPlayer(p2);
+        this.player1 = new WarPlayer(player1);
+        this.player2 = new WarPlayer(player2);
         this.mainDeck = new Deck();
         dealCards();
     }
@@ -57,8 +57,8 @@ public class WarGame extends Game{
         field.add(c1);
         field.add(c2);
         
-        System.out.println(player1.getName()+" flips: " + c1);
-        System.out.println(player2.getName() + " flips: " + c2);
+        System.out.println(player1.getName()+" flips " + c1);
+        System.out.println(player2.getName() + " flips " + c2);
         
         WarCard w1 = (WarCard) c1;
         WarCard w2 = (WarCard) c2;
@@ -140,9 +140,9 @@ public class WarGame extends Game{
             System.out.println("Game over");
             
             if (p1Has && p2Has){
-                System.out.println("Winner: " + player1.getName());              
+                System.out.println("Winner is " + player1.getName());              
             }else if (!p1Has&& p2Has){
-                System.out.println("Winner: " + player2.getName());
+                System.out.println("Winner is " + player2.getName());
             }
         }
         

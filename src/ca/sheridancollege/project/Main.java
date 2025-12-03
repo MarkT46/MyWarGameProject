@@ -11,12 +11,12 @@ import java.util.Scanner;
  */
 public class Main {
     public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         System.out.println("Enter Player1's name:" );
-        String p1Name = sc.nextLine();
+        String p1Name = input.nextLine();
         
         System.out.println("Enter Player2's name:");
-        String p2Name = sc.nextLine();
+        String p2Name = input.nextLine();
         
         WarGame game = new WarGame("War Game", p1Name, p2Name);
         
@@ -28,7 +28,7 @@ public class Main {
             }
             
             System.out.print("f = flip cards / q = quit game: ");
-            String userChoice = sc.nextLine();
+            String userChoice = input.nextLine();
             
             if (userChoice.equals("f")){
                 game.playOneRound();
@@ -40,6 +40,6 @@ public class Main {
                 System.out.println("Invalid command");
             }
         }
-        sc.close();
+        input.close();
     }
 }
