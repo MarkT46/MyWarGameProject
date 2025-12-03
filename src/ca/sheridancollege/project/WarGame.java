@@ -67,8 +67,10 @@ public class WarGame extends Game{
         
         if (result > 0){
             System.out.println(player1.getName() + " wins this round.");
+            player1.Receive(field);
         } else if (result < 0){
             System.out.println(player2.getName() + " wins this round.");
+            player2.Receive(field);
         } else{
             System.out.println("Start War");
             startWar(field);
@@ -139,7 +141,7 @@ public class WarGame extends Game{
             System.out.println();
             System.out.println("Game over");
             
-            if (p1Has && p2Has){
+            if (p1Has && !p2Has){
                 System.out.println("Winner is " + player1.getName());              
             }else if (!p1Has&& p2Has){
                 System.out.println("Winner is " + player2.getName());
