@@ -4,10 +4,23 @@
  */
 package ca.sheridancollege.project;
 
+import java.util.Scanner;
 /**
  *
- * @author mtake
+ * @author Maasaki Takenaka Dec 2025
  */
 public class Main {
-    
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter Player1's name:" );
+        String p1Name = sc.nextLine();
+        
+        System.out.println("Enter Player2's name:");
+        String p2Name = sc.nextLine();
+        
+        WarGame game = new WarGame("War Game", p1Name, p2Name);
+        
+        
+        
+    }
 }

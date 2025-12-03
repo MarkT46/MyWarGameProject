@@ -68,4 +68,8 @@ public class GroupOfCards {
         }
         return cards.remove(cards.size()-1);
     }
+    
+    public boolean isEmpty(){
+        return cards.isEmpty();
+    }
 }//end class
