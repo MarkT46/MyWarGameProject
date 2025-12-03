@@ -23,6 +23,7 @@ public class WarGame extends Game{
         dealCards();
     }
     
+    
     public void dealCards(){
         boolean toPlayer1 = true;
         while(!mainDeck.isEmpty()){
@@ -36,7 +37,6 @@ public class WarGame extends Game{
             toPlayer1 = !toPlayer1;
         }
     }
-    
     
     
     public void playOneRound(){
